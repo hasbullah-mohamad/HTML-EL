@@ -1,0 +1,44 @@
+.card-order {
+  // width: 240px;
+  margin-bottom: 50px;
+  .featured-image {
+    background-size: cover;
+    background-position: center;
+    height: 0;
+    width: 100%;
+    padding-bottom: 80%;
+    margin-bottom: 20px;
+  }
+  .sub-title {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    font-family: $font-family-special;
+    font-size: 18px;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  @include media-breakpoint-down('md') {
+    justify-content: center;
+  }
+  .social {
+    text-align: center;
+    padding: 20px;
+    .name {
+      color: $gray-400;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .tag {
+      font-size: 20px;
+      font-weight: $font-weight-medium;
+    }
+  }
+}

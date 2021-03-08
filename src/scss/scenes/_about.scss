@@ -1,0 +1,20 @@
+.about-page {
+  .section-introduction {
+    .container {
+      &:after {
+        bottom: -200px;
+      }
+    }
+    .description {
+      font-family: $font-family-special;
+      font-size: 18px;
+      br {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .section-gallery {
+    height: 670px;
+    background-position: bottom;
+  }
+}

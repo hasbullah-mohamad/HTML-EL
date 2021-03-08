@@ -1,0 +1,70 @@
+$font-maps: (
+  'PoppinsMedium':                       ( family: 'Poppins',        file: 'Poppins-Medium',         weight: 500, style: normal ),
+  'PoppinsRegular':                      ( family: 'Poppins',        file: 'Poppins-Regular',        weight: 400, style: normal ),
+  'GTSuperDisplay':                      ( family: 'GTSuperDisplay', file: 'GTSuperDisplay-Medium',  weight: 500, style: normal ),
+  'PlayfairDisplay':                     ( family: 'PlayfairDisplay',file: 'PlayfairDisplay-Regular',weight: 400, style: normal )
+);
+
+$font-weight-maps: (
+  'normal': $font-weight-normal,
+  'bold': $font-weight-bold,
+  'medium': $font-weight-medium
+);
+
+$icon-sizes: (
+  'xl': 64px,
+  'lg': 40px,
+  'md': 25px,
+  'base': 20px,
+  'sm': 18px,
+  'xs': 7px
+);
+
+$heading-maps: (
+  'h1': ('font-size': $h1-font-size, 'letter-spacing': 0, 'line-height': 1),
+  'h2': ('font-size': $h2-font-size, 'letter-spacing': 0, 'line-height': 1),
+  'h3': ('font-size': $h3-font-size, 'letter-spacing': 0, 'line-height': 1),
+  'h4': ('font-size': $h4-font-size, 'letter-spacing': 0, 'line-height': 1),
+  'h5': ('font-size': $h5-font-size, 'letter-spacing': 0, 'line-height': 1),
+  'h6': ('font-size': $h6-font-size, 'letter-spacing': 0, 'line-height': 1)
+);
+
+$heading-extended-maps: (
+  'h3': ('font-size': $h3-font-size, 'letter-spacing': 0, 'line-height': 1),
+);
+
+$font-size-maps: (
+  'lg': ('font-size': $font-size-base * 1.25),
+  'md': ('font-size': $font-size-base * 1.125),
+  'base': ('font-size': $font-size-base),
+  'sm': ('font-size': $font-size-base * 0.875),
+  'xs': ('font-size': $font-size-base * 0.75)
+);
+
+$font-family-sans-serif:      Poppins;
+$font-family-monospace:       PlayfairDisplay;
+$font-family-special:         GTSuperDisplay;
+
+$icon-names: (
+  'twitter',
+  'facebook',
+  'facebook-big',
+  'gplus',
+  'tumblr',
+  'quote-top',
+  'quote-bottom',
+  'instagram',
+  'linkedin',
+  'wechat',
+  'weibo',
+  'play',
+  'white-wechat',
+  'white-linkedin',
+  'white-facebook',
+  'white-instagram',
+  'white-weibo'
+);
+
+.font-weight-medium {
+  font-weight: $font-weight-medium !important;
+}

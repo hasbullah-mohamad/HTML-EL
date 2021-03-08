@@ -1,0 +1,20 @@
+.grandmother-page {
+  .section-hero {
+    .container {
+      a {
+        margin-left: 15px;
+      }
+      &:after {
+        left: 0;
+      }
+      .special-title {
+        &:before {
+          left: 36%;
+        }
+        &:after {
+          right: 66%;
+        }
+      }
+    }
+  }
+}

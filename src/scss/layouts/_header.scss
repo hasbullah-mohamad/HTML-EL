@@ -1,0 +1,184 @@
+.site-header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  .navbar {
+    padding: 0;
+    .navbar-heading {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+      padding-left: 80px;
+      padding-right: 80px;
+      z-index: 4;
+      @include media-breakpoint-down('md') {
+        padding: 30px 20px 0 20px;
+      }
+      .navbar-brand {
+        max-width: 163px;
+        width: 100%;
+        position: relative;
+      }
+      .navbar-toggler {
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        padding: 0;
+        position: relative;
+        border: none;
+        outline: none;
+        span {
+          &:not(:last-of-type) {
+            margin-bottom: 5px;
+          }
+          height: 3px;
+          width: 60px;
+          background-color: $white;
+          border-radius: 2px;
+          display: block;
+          @include transition(transform .2s ease);
+          &:first-child {
+            width: 30px;
+            margin-left: auto;
+          }
+        }
+        
+        &[aria-expanded="true"] {
+          span {
+            position: absolute;
+            top: 32px;
+            transition: all .1s ease-in-out;
+            &:first-child {
+              width: 60px;
+              transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+              visibility: hidden;
+            }
+            &:last-child {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .navbar-collapse {
+    padding: 100px 80px 40px 80px;
+    background-color: rgba(black, 0.5);
+    position: relative;
+    margin-top: -100px;
+    &.show {
+      height: 832px;
+      @include media-breakpoint-down('md') {
+        height: 610px;
+      }
+      @include media-breakpoint-down('sm') {
+        height: 102vh;
+      }
+      .navbar-footer {
+        opacity: 1 !important;
+        transition: opacity .2s ease-in-out;
+      }
+    }
+    @include media-breakpoint-down('md') {
+      padding: 100px 20px 30px 20px;
+    }
+    .navbar-expanded {
+      position: relative;
+      padding-top: 80px;
+      height: 100%;
+      .navbar-footer {
+        opacity: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        flex-wrap: wrap;
+        left: 0;
+        bottom: 26px;
+        width: 100%;
+        @include media-breakpoint-down('md') {
+          // position: relative;
+          bottom: 0;
+        }
+
+        @include media-breakpoint-down('sm') {
+          justify-content: center;
+          position: relative;
+          top: 26px;
+          bottom: auto;
+        }
+        h4 {
+          margin-right: 10px;
+          @include media-breakpoint-down('sm') {
+            font-size: 24px;
+          }
+        }
+        .navbar-socials {
+          display: flex;
+          // margin-left: auto;
+          .icon {
+            margin-left: 60px;
+            @include media-breakpoint-down('md') {
+              margin-left: 30px;
+            }
+          }
+          a:first-child {
+            .icon {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      @include media-breakpoint-down('md') {
+        padding-top: 20px;
+      }
+    }
+    .navbar-nav {
+      padding-left: 100px;
+      position: relative;
+      @include media-breakpoint-down('md') {
+        padding-left: 20px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 203px;
+        background-color: $warning;
+        bottom: 15px;
+        left: 0;
+      }
+      .nav-item {
+        .nav-link {
+          font-size: 30px;
+          color: $white;
+          font-family: $font-family-special;
+          font-weight: 500;
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+          &:hover {
+            &:after {
+              content: '';
+              position: absolute;
+              width: 329px;
+              height: 1px;
+              background-color: $warning;
+              top: 30px;
+              right: -350px;
+              @include media-breakpoint-down('xs') {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

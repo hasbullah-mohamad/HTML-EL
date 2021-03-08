@@ -1,0 +1,38 @@
+.experience-item {
+  max-width: 422px;
+  border-bottom: 1px solid $dark;
+  margin-bottom: 38px;
+  .date {
+    color: $gray-700;
+  }
+}
+
+.contact-form {
+  .form-item {
+    max-width: 420px;
+    margin-bottom: 20px;
+    position: relative;
+    input, textarea {
+      width: 100%;
+      border-color: transparent;
+      border-bottom: 1px solid $dark;
+      background-color: transparent;
+      outline: none;
+      position: relative;
+      z-index: 2;
+      &:not(:placeholder-shown)
+      + .label {
+        top: -18px;
+      }
+    }
+    label {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: 0;
+    }
+    input:focus + label {
+      top: -18px;
+    }
+  }
+}
